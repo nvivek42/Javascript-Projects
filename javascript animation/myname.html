@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <style>
+    #srk {
+      position: relative;
+      cursor: pointer;
+    }
+    #welcome {
+        position: relative;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+
+  <img id="srk" src="srk.jpeg">
+  <h1 id="welcome">welcome to jungle</h1>
+  <script>
+    srk.onclick = function() {
+      let start = Date.now();
+
+      let timer = setInterval(function() {
+        let timePassed = Date.now() - start;
+
+        srk.style.left = timePassed / 5 + 'px';
+
+        if (timePassed > 6000) clearInterval(timer);
+
+      }, 20);
+    }
+  </script>
+
+
+</body>
+
+</html>
